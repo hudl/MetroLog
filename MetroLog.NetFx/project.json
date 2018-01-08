@@ -6,6 +6,7 @@
     },
     "supports": { },
     "runtimes": {
-        "win": { } 
+        "win": { },
+        "win-x64": { } 
     }
 }
