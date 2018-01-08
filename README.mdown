@@ -27,7 +27,6 @@ This is a custom fork of MetroLog for Hudl internal use. It is only published to
 
 Currently, this project only builds and publishes libraries for the following platforms:
 
-- NetCore
 - Windows (net45)
 
 It's recommended that you use the `HudlMetroLog.sln` when opening the project (the other solution is kept here in case we need it for compatibility/support/bug fixing/etc).
