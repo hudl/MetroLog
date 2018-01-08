@@ -4,6 +4,13 @@ param (
    [string]$nugetPushSource
 )
 
+trap # teamcity has a bug where powershell processes always return 0 when exceptions are thrown
+{
+    write-output $_
+    ##teamcity[buildStatus status='FAILURE' ]
+    exit 1
+}
+
 $ErrorActionPreference = "Stop"
 
 $target = "Release"
