@@ -29,7 +29,6 @@ Currently, this project only builds and publishes libraries for the following pl
 
 - NetCore
 - Windows (net45)
-- Windows (PCL)
 
 It's recommended that you use the `HudlMetroLog.sln` when opening the project (the other solution is kept here in case we need it for compatibility/support/bug fixing/etc).
 
