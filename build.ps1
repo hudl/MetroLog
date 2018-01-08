@@ -17,11 +17,15 @@ $target = "Release"
 $branch = git rev-parse --abbrev-ref HEAD
 $branch = $branch -replace '[-]',''
 
+$version = "1.1.0" # update this to release a new version
+
 if ($branch.Length+($buildNumber.ToString().Length) -gt 20) {
   $branch = $branch.SubString(0, 20 - ($buildNumber.ToString().Length + 1))
 }
 
-$version = "1.1.0-$branch$buildNumber"
+if ($branch -ne "master") {
+  $version = "$version-$branch$buildNumber"
+}
 
 $dotNetVersion = "14.0"
 $regKey = "HKLM:\software\Microsoft\MSBuild\ToolsVersions\$dotNetVersion"

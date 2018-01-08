@@ -31,6 +31,10 @@ Currently, this project only builds and publishes libraries for the following pl
 
 It's recommended that you use the `HudlMetroLog.sln` when opening the project (the other solution is kept here in case we need it for compatibility/support/bug fixing/etc).
 
+Releasing a new version
+===
+Stable versions of HudlMetroLog are published whenever a merge to `master` is done. All other branches are pushed to our NuGet server as pre-release versions. To change the version number, update the `build.ps1` file and change the `$version` variable to the correct version, then push your changes.
+
 Documentation
 ===
 The intention is that MetroLog is mostly compatible with NLog. Both the surface area and internal construction
