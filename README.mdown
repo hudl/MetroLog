@@ -1,25 +1,39 @@
 Overview
 ===
 MetroLog is a lightweight logging framework designed for Windows Store and Windows Phone 8 apps. Although the API is based on
-NLog and log4net, the intention is that it's a very basic logging system. 
+NLog and log4net, the intention is that it's a very basic logging system.
 
-The need for it to be basic comes from the fact that the Windows Store apps API surface area intentionally limited for very specific 
-applications. This project came out of the fact that porting NLog to Windows Store apps is difficult because of it's 
+The need for it to be basic comes from the fact that the Windows Store apps API surface area intentionally limited for very specific
+applications. This project came out of the fact that porting NLog to Windows Store apps is difficult because of it's
 incredibly rich feature set, most of which is not workable in Windows Store apps.
 
 Out-of-the-box, logging operations are intended to send all log levels to `Debug.WriteLine` and [EventTracingForWindows](https://github.com/mbrit/MetroLog/wiki/EventTracingForWindows) (ETW).
-and ERROR and FATAL levels to a file in the app's `LocalState` folder using [FileSnapshotTarget](https://github.com/mbrit/MetroLog/wiki/FileSnapshotTarget). 
+and ERROR and FATAL levels to a file in the app's `LocalState` folder using [FileSnapshotTarget](https://github.com/mbrit/MetroLog/wiki/FileSnapshotTarget).
 
-Caution on using `Debug.WriteLine` with NuGet. The NuGet packages are compiled as RELEASE mode and `Debug.WriteLine` calls are #ifdef'd out. Use 
+Caution on using `Debug.WriteLine` with NuGet. The NuGet packages are compiled as RELEASE mode and `Debug.WriteLine` calls are #ifdef'd out. Use
 the ETW mode, or [FileStreamingTarget](https://github.com/mbrit/MetroLog/wiki/FileStreamingTarget) to see levels TRACE through WARN.
 
-For Windows Store apps we recommend that you configure the [SQLiteTarget](https://github.com/mbrit/MetroLog/wiki/SQLiteTarget). For support purposes, 
+For Windows Store apps we recommend that you configure the [SQLiteTarget](https://github.com/mbrit/MetroLog/wiki/SQLiteTarget). For support purposes,
 you can load entries back out of the SQLite database and package them for email over the Share charm.
 
-You can use [JsonPostTarget](https://github.com/mbrit/MetroLog/wiki/JsonPostTarget) to stream log messages back to an HTTP/HTTPS end-point of your 
+You can use [JsonPostTarget](https://github.com/mbrit/MetroLog/wiki/JsonPostTarget) to stream log messages back to an HTTP/HTTPS end-point of your
 own design. (Although we provide a sample app.)
 
 We ensure that MetroLog is compataible with WACK requirements.
+
+Hudl Specific Information
+===
+This is a custom fork of MetroLog for Hudl internal use. It is only published to our internal nexus repository (http://nexus.hudltools.com) and is named "HudlMetroLog" so it doesn't conflict with the public package name. Namespaces and code should largely be the same, with the exception of a bunch of platform specific libraries that have been removed from the package.
+
+Currently, this project only builds and publishes libraries for the following platforms:
+
+- Windows (net45)
+
+It's recommended that you use the `HudlMetroLog.sln` when opening the project (the other solution is kept here in case we need it for compatibility/support/bug fixing/etc).
+
+Releasing a new version
+===
+Stable versions of HudlMetroLog are published whenever a merge to `master` is done. All other branches are pushed to our NuGet server as pre-release versions. To change the version number, update the `build.ps1` file and change the `$version` variable to the correct version, then push your changes.
 
 Documentation
 ===
@@ -36,8 +50,8 @@ enable VS 2012 to discover and run the unit tests.
 
 Meta
 ===
-This is an open source project that welcomes contributions/suggestions/bug reports from those who use it. 
-If you have any ideas on how to improve the library, please contact [@mbrit](https://twitter.com/mbrit) or 
+This is an open source project that welcomes contributions/suggestions/bug reports from those who use it.
+If you have any ideas on how to improve the library, please contact [@mbrit](https://twitter.com/mbrit) or
 [@onovotny](https://twitter.com/onovotny).
 
-MetroLog is distributed under the MIT license. 
+MetroLog is distributed under the MIT license.
