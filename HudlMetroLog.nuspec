@@ -86,7 +86,7 @@
     <!-- <file src="MetroLog.Android\bin\Release\MetroLog.pdb" target="lib\MonoAndroid\MetroLog.pdb" />
     <file src="MetroLog.Android\bin\Release\MetroLog.dll" target="lib\MonoAndroid\MetroLog.dll" /> -->
     <!-- dotnet -->
-    <!-- <file src="MetroLog.NetCore\bin\Release\MetroLog.pdb" target="lib\dotnet\MetroLog.pdb" />
-    <file src="MetroLog.NetCore\bin\Release\MetroLog.dll" target="lib\dotnet\MetroLog.dll" /> -->
+    <file src="MetroLog.NetCore\bin\Release\MetroLog.pdb" target="lib\dotnet\MetroLog.pdb" />
+    <file src="MetroLog.NetCore\bin\Release\MetroLog.dll" target="lib\dotnet\MetroLog.dll" />
   </files>
 </package>
