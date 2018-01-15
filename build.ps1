@@ -17,7 +17,7 @@ $target = "Release"
 $branch = git rev-parse --abbrev-ref HEAD
 $branch = $branch -replace '[-]',''
 
-$version = "1.1.0" # update this to release a new version
+$version = "1.2.0" # update this to release a new version
 
 if ($branch.Length+($buildNumber.ToString().Length) -gt 20) {
   $branch = $branch.SubString(0, 20 - ($buildNumber.ToString().Length + 1))

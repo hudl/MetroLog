@@ -112,12 +112,6 @@
   <ItemGroup>
     <None Include="project.json" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MetroLog.Win81\MetroLog.Win81.csproj">
-      <Project>{429ee5fc-46fe-4249-bb40-8dc6d9023a04}</Project>
-      <Name>MetroLog.Win81</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

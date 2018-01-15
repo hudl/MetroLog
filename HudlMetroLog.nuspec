@@ -56,12 +56,12 @@
     <file src="typescript\winrt.d.ts" target="content\win8-javascript\typings\winrt.d.ts" />
     <file src="typescript\MetroLog.WinRT.d.ts" target="content\win8-javascript\typings\MetroLog.WinRT.d.ts" />
     <!-- .NET 4.5 -->
-    <file src="MetroLog.NetFx\bin\Release\MetroLog.dll" target="lib\net45\MetroLog.dll" />
-    <file src="MetroLog.NetFx\bin\Release\MetroLog.pdb" target="lib\net45\MetroLog.pdb" />
+    <!-- <file src="MetroLog.NetFx\bin\Release\MetroLog.dll" target="lib\net45\MetroLog.dll" />
+    <file src="MetroLog.NetFx\bin\Release\MetroLog.pdb" target="lib\net45\MetroLog.pdb" /> -->
     <!-- Win 8.1 -->
-    <!-- <file src="MetroLog.Win81\bin\Release\MetroLog.dll" target="lib\win81\MetroLog.dll" />
+    <file src="MetroLog.Win81\bin\Release\MetroLog.dll" target="lib\win81\MetroLog.dll" />
     <file src="MetroLog.Win81\bin\Release\MetroLog.pdb" target="lib\win81\MetroLog.pdb" />
-    <file src="MetroLog.Win81\bin\Release\MetroLog.pri" target="lib\win81\MetroLog.pri" /> -->
+    <file src="MetroLog.Win81\bin\Release\MetroLog.pri" target="lib\win81\MetroLog.pri" />
     <!-- WinRT components -->
     <!-- <file src="MetroLog.WinRT\bin\Release\MetroLog.WinRT.pdb" target="lib\win81\MetroLog.WinRT.pdb" />
     <file src="MetroLog.WinRT\bin\Release\MetroLog.WinRT.pri" target="lib\win81\MetroLog.WinRT.pri" />
